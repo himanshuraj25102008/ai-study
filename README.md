@@ -32,6 +32,10 @@ RLS protects learner profiles, answers, and queries. Answer keys are stored sepa
 
 Deploy to any Node-compatible Next.js host. Configure all variables in `.env.example`, use the deployed origin for `NEXT_PUBLIC_SITE_URL`, add its `/auth/callback` to Supabase's redirect allowlist, apply the SQL migration, and update OAuth callbacks. This app uses the public anon key with RLS; never expose a service-role key.
 
+### Vercel
+
+In Vercel, import `himanshuraj25102008/ai-study` and select the `himanshuraj25102008-ai-study-website` branch. Keep the detected Next.js framework defaults. Add `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `ADMIN_EMAIL`, and `NEXT_PUBLIC_SITE_URL` to the Vercel project's Production environment, then deploy the branch. A new push to this branch triggers another deployment when the Git integration is connected.
+
 No site has been deployed and no domain registered. `ai__study.com` contains underscores and is not a valid standard DNS hostname; purchase/configure a valid domain separately and point it at the deployment before using it as the production URL.
 
 ## Checks
